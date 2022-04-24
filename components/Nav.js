@@ -1,4 +1,4 @@
-import requests from "../../helpers/requests"
+import requests from "../helpers/requests"
 import { useRouter } from "next/router";
 
 export default function Nav() {

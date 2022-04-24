@@ -1,8 +1,8 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import requests from '../helpers/requests';
-import Header from './components/Header';
-import Nav from './components/Nav';
-import Results from './components/Results';
+import Header from '../components/Header';
+import Nav from '../components/Nav';
+import Results from '../components/Results';
 
 export default function Home({ results }) {
   return (
@@ -16,17 +16,17 @@ export default function Home({ results }) {
       <Nav />
       <Results results={results} />
     </div>
-  )
+  );
 }
 
 export async function getServerSideProps(context) {
-  const genre = context.query.genre
+  const genre = context.query.genre;
   const request = await fetch(`https://api.themoviedb.org/3${requests[genre]?.url || requests.fetchTrending.url}`)
-    .then(res => res.json())
+    .then(res => res.json());
 
   return {
     props: {
       results: request.results
     }
-  }
+  };
 }
