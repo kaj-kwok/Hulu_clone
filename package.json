@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "lint": "next lint"
   },
   "dependencies": {
@@ -15,6 +15,7 @@
     "postcss": "^8.4.12",
     "react": "18.0.0",
     "react-dom": "18.0.0",
+    "react-flip-move": "^3.0.4",
     "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {

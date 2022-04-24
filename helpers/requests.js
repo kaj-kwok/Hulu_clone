@@ -14,7 +14,7 @@ export default {
     url: `/discover/movie?api_key=${API_KEY}&with_genres=28`
   },
   fetchComedyMovies: {
-    title: 'Action',
+    title: 'Comedy',
     url: `/discover/movie?api_key=${API_KEY}&with_genres=35`
   },
   fetchHorrorMovies: {
@@ -45,4 +45,5 @@ export default {
     title: 'TV Movie',
     url: `/discover/movie?api_key=${API_KEY}&with_genres=10770`
   },
+
 }
